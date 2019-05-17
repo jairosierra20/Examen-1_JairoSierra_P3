@@ -186,9 +186,10 @@ void Ejercicio1(char** matrix)
 	    cin>>cadena;
 	    string cadena1=" "; 
 	    cadena1 = cadena.substr(0,1);
-	   string  cadena2 = " ";
+	    string  cadena2 = " ";
 	    cadena2 = cadena.substr(2,3);
 	    int x=0,y=0;
+	    //Se valida el valor del x
 	   if(cadena1=="A"||cadena1=="a"){
 	     x=0;
 	   }
@@ -222,145 +223,147 @@ void Ejercicio1(char** matrix)
 	   if(cadena1=="K"||cadena1=="k"){
 	     x=10;
 	   }
+	   //Se calcula el valor de y
 	   y=0;
 	   y=(int)cadena2[0]-48;
+	   //While que valida de x y y esten en el tamaño de la matriz
 	   while (x >= 11 || x < 0 || y>=11 || y<0) {
-		   cout<<"Escoja la pieza que va a mover."<<endl;//Se obtienen x y y para saber que pieza se movera
-            cout<<"Ingrese la coordenada x: "<<endl;
-            string cadena=" ";
-            cin>>cadena;
-            string cadena1=" ";
-            cadena1 = cadena.substr(0,1);
-           string  cadena2 = " ";
-            cadena2 = cadena.substr(2,3);
-            int x=0,y=0;
-           if(cadena1=="A"||cadena1=="a"){
-             x=0;
-           }
-           if(cadena1=="B"|| cadena1=="b"){
-             x=1;
-           }
-           if(cadena1=="C"||cadena1=="c"){
-             x=2;
-           }
-           if(cadena1=="D"||cadena1=="d"){
-             x=3;
-           }
-           if(cadena1=="E"||cadena1=="e"){
-             x=4;
-           }
-           if(cadena1=="F"||cadena1=="f"){
-             x=5;
-           }
-	   if(cadena1=="G"||cadena1=="g"){
-             x=6;
-           }
-           if(cadena1=="H"||cadena1=="h"){
-             x=7;
-           }
-           if(cadena1=="I"||cadena1=="i"){
-             x=8;
-           }
-           if(cadena1=="J"||cadena1=="j"){
-             x=9;
-           }
-           if(cadena1=="K"||cadena1=="k"){
-             x=10;
-           }
-           y=0;
-           y=(int)cadena2[0]-48;
+		cout<<"Escoja la pieza que va a mover."<<endl;//Se obtienen x y y para saber que pieza se movera
+            	cout<<"Ingrese la coordenada x: "<<endl;
+            	string cadena=" ";
+            	cin>>cadena;
+                string cadena1=" ";
+            	cadena1 = cadena.substr(0,1);
+            	string  cadena2 = " ";
+            	cadena2 = cadena.substr(2,3);
+            	int x=0,y=0;
+           	if(cadena1=="A"||cadena1=="a"){
+             		x=0;
+           	}	
+           	if(cadena1=="B"|| cadena1=="b"){
+             		x=1;
+           	}
+           	if(cadena1=="C"||cadena1=="c"){
+             		x=2;
+           	}
+           	if(cadena1=="D"||cadena1=="d"){
+             		x=3;
+           	}
+           	if(cadena1=="E"||cadena1=="e"){
+             		x=4;
+           	}
+           	if(cadena1=="F"||cadena1=="f"){
+             		x=5;
+           	}
+	   	if(cadena1=="G"||cadena1=="g"){
+             		x=6;
+           	}
+           	if(cadena1=="H"||cadena1=="h"){
+             		x=7;
+           	}
+           	if(cadena1=="I"||cadena1=="i"){
+             		x=8;
+           	}
+           	if(cadena1=="J"||cadena1=="j"){
+             		x=9;
+           	}
+           	if(cadena1=="K"||cadena1=="k"){
+             		x=10;
+           	}
+           	y=0;
+           	y=(int)cadena2[0]-48;
 	   }//fin del while de comprobrar las primeras coordenadas
 	   if (piezas(matrix, x, y, i)) {//verifica si la pieza seleccionada es correcta al turno del jugador
-                bool flag = true;
+                	bool flag = true;
                 while (flag) {
                    cout<<"Ingrese las coordenadas a las que desea mover la ficha. "<<endl;//Se obtienen las nuevas coordenadas a las que se movera la pieza
 		   string cadena3= " ";
 		   int movx=0,movy=0;
-                    cout<<"Ingrese la coordenada: "<<endl;
-                    cin>>cadena3;
-		    string cadena4=" ";
-                    cadena4 = cadena3.substr(0,1);
-                     string  cadena5 = " ";
-                    cadena5 = cadena3.substr(2,3);
-          if(cadena4=="A"||cadena4=="a"){
-             movx=0;
-           }
-           if(cadena4=="B"||cadena4=="b"){
-             movx=1;
-           }
-           if(cadena4=="C"||cadena4=="c"){
-             movx=2;
-           }
-           if(cadena4=="D"||cadena4=="d"){
-             movx=3;
-           }
-           if(cadena4=="E"||cadena4=="e"){
-             movx=4;
-           }
-           if(cadena4=="F"||cadena4=="f"){
-             movx=5;
-           }
-           if(cadena4=="G"||cadena4=="g"){
-             movx=6;
-           }
-           if(cadena4=="H"||cadena4=="h"){
-             movx=7;
-           }
-           if(cadena4=="I"||cadena4=="i"){
-            movx=8;
-           }
-           if(cadena4=="J"||cadena4=="j"){
-             movx=9;
-           }
-           if(cadena4=="K"||cadena4=="k"){
-             movx=10;
-           }
-	   movy = (int)cadena5[0]-48;
+                   cout<<"Ingrese la coordenada: "<<endl;
+                   cin>>cadena3;
+		   string cadena4=" ";
+                   cadena4 = cadena3.substr(0,1);
+                   string  cadena5 = " ";
+                   cadena5 = cadena3.substr(2,3);
+         	 if(cadena4=="A"||cadena4=="a"){
+             		movx=0;
+           	}
+           	if(cadena4=="B"||cadena4=="b"){
+             		movx=1;
+           	}
+           	if(cadena4=="C"||cadena4=="c"){
+             		movx=2;
+          	 }	
+           	if(cadena4=="D"||cadena4=="d"){
+             		movx=3;
+           	}
+           	if(cadena4=="E"||cadena4=="e"){
+             		movx=4;
+           	}
+           	if(cadena4=="F"||cadena4=="f"){
+             		movx=5;
+           	}
+           	if(cadena4=="G"||cadena4=="g"){
+             		movx=6;
+           	}
+           	if(cadena4=="H"||cadena4=="h"){
+             		movx=7;
+           	}
+           	if(cadena4=="I"||cadena4=="i"){
+            		movx=8;
+           	}
+           	if(cadena4=="J"||cadena4=="j"){
+             		movx=9;
+           	}
+           	if(cadena4=="K"||cadena4=="k"){
+             		movx=10;
+           	}
+	   	movy = (int)cadena5[0]-48;
                     while (movx >= 11 || movx < 0 || movy>=11 || movy<0) {
-			    cout<<"Valores incorrecto"<<endl;
-                       cout<<"Ingrese las coordenadas a las que desea mover la ficha. "<<endl;//Se obtienen las nuevas coordenadas a las que se movera la pieza
-                   string cadena3= " ";
-                   int movx=0,movy=0;
-                    cout<<"Ingrese la coordenada: "<<endl;
-                    cin>>cadena3;
-                    string cadena1=" ";
-                    cadena1 = cadena3.substr(0,1);
-                     string  cadena2 = " ";
-                    cadena2 = cadena3.substr(2,3);
-          if(cadena1=="A"||cadena1=="a"){
-             movx=0;
-           }
-           if(cadena1=="B"||cadena1=="b"){
-             movx=1;
-           }
-           if(cadena1=="C"||cadena1=="c"){
-             movx=2;
-           }
-           if(cadena1=="D"||cadena1=="d"){
-             movx=3;
-           }
-           if(cadena1=="E"||cadena1=="e"){
-             movx=4;
-           }
-           if(cadena1=="F"||cadena1=="f"){
-             movx=5;
-           }
-           if(cadena1=="G"||cadena1=="g"){
-             movx=6;
-           }
-	   if(cadena1=="H"||cadena1=="h"){
-             movx=7;
-           }
-           if(cadena1=="I"||cadena1=="i"){
-             x=8;
-           }
-           if(cadena1=="J"||cadena1=="j"){
-             movx=9;
-           }
-           if(cadena1=="K"||cadena1=="k"){
-             movx=10;
-           }
-           movy = (int)cadena2[0];
+			 	cout<<"Valores incorrecto"<<endl;
+                       	 	cout<<"Ingrese las coordenadas a las que desea mover la ficha. "<<endl;//Se obtienen las nuevas coordenadas a las que se movera la pieza
+                   		string cadena3= " ";
+                   		int movx=0,movy=0;
+                    		cout<<"Ingrese la coordenada: "<<endl;
+                    		cin>>cadena3;
+                    		string cadena1=" ";
+                    		cadena1 = cadena3.substr(0,1);
+                     		string  cadena2 = " ";
+                    		cadena2 = cadena3.substr(2,3);
+          		if(cadena1=="A"||cadena1=="a"){
+             			movx=0;
+           		}
+           		if(cadena1=="B"||cadena1=="b"){
+            			 movx=1;
+           		}
+           		if(cadena1=="C"||cadena1=="c"){
+             			movx=2;
+           		}
+           		if(cadena1=="D"||cadena1=="d"){
+             			movx=3;
+           		}
+           		if(cadena1=="E"||cadena1=="e"){
+             			movx=4;
+           		}
+           		if(cadena1=="F"||cadena1=="f"){
+             			movx=5;
+           		}
+           		if(cadena1=="G"||cadena1=="g"){
+             			movx=6;
+           		}
+	   		if(cadena1=="H"||cadena1=="h"){
+             			movx=7;
+           		}
+           		if(cadena1=="I"||cadena1=="i"){
+            			movx=8;
+           		}
+           		if(cadena1=="J"||cadena1=="j"){
+             			movx=9;
+           		}
+           		if(cadena1=="K"||cadena1=="k"){
+             			movx=10;
+           		}
+           		movy = (int)cadena2[0];
                     }//fin del movimiento en la coordenada x
                     if (matrix[movx][movy] == ' ' && (movx == x || movy == y)) {//coloca la pieza en las coordenadas que indica el usuario
                         if (i % 2 == 0) {
